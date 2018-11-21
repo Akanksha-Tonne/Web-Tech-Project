@@ -1,0 +1,6 @@
+1) session php - login to home page.
+2)if user is not registered then he is directed to login page then he logs in then goes to the home page.(Navigation bar the users name should appear)
+3)Session where user can access all pages only if he is logged in .
+4)Navigation bar search box as datalist.
+5)
+1) Finishing up the login page format and it.

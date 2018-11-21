@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="login_change_style.css">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+	<title>DeliciousMenu.com</title>
+	
+</head>
+<body>
+	<div id="banner">
+		<div id = "navbar" class="toy">
+			<nav class="font">
+				<a href="index_change.html"><strong>Home |</strong></a>
+				<a href="login_change.html"><strong>Login  |</strong></a>
+				<a href="#about_us"><strong>About us!</strong></a>
+			</nav>
+		</div>
+		<fieldset id="login_form">
+			<legend><strong>Login</strong></legend>
+			<form  action="login_change.php" method="POST">
+		
+				<strong>Username</strong><br><input type="text" name="usn"><br>
+				<strong>Password</strong><br><input type="password" name="password"><br><br>
+				<input type="submit" name="submit">
+			</form>
+		</fieldset>
+		
+	</div>
+
+	<div id="about_us">
+			<strong>About Us</strong>
+				<div id="some_data">
+					<div class="some_thing">
+						<strong>Address</strong>:Outer Ring Rd, Banashankari 3rd Stage, Banashankari, Bengaluru, Karnataka 560085
+					</div>
+					<div class="some_thing">
+						<strong>Campus</strong>:Urban
+					</div>	
+					<div class="some_thing">
+						<strong>Terms Of Use.</strong>
+						
+					</div>
+					<div class="some_thing">
+						<strong>License</strong>:All rights reserved.
+					</div>
+				</div>
+
+		</div>
+		<div id="social_media">
+				<ul>
+				  <li><a href="#index_change.html"><img src="facebook.jpg" height="30" width="30"></a></li>
+				  <li><a href="#index_change.html"><img src="pintrest.jpg" height="30" width="30"></a></li>
+				  <li><a href="#index_change.html"><img src="instagram.jpg" height="30" width="30"></a></li>
+				  <li><a href="#index_change.html"><img src="google+.jpg" height="30" width="30"></a></li>
+				  <li><a href="#index_change.html"><img src="twitter.jpg" height="30" width="30"></a></li>
+				  <li><a href="#index_change.html"><img src="whatsapp.jpg" height="30" width="30"></a></li>
+				</ul>
+			</div>
+
+
+	</div>
+
+	<script type="text/javascript">
+		window.onscroll = function() {myFunction();};
+		
+		/*window.onscroll = function(){myScrollFunction();}                 !!!!!!!!!!!!!!!!!!!!!!!!!
+		function myScrollFunction(){
+			if(window.pageYOffset==0){
+				console.log(window.pageYOffset)
+          	navbar.backgroundColor="transparent";
+			}
+			else{
+
+          	navbar.backgroundColor="grey";
+			}
+		}*/
+        // Get the navbar
+        var navbar = document.getElementById("navbar");
+        
+        
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+        var y = 790;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+          if (window.pageYOffset >= sticky) 
+          {
+            navbar.classList.add("sticky");
+            if(window.pageYOffset>=y)
+            {
+            	navbar.classList.add("color");
+            	// n2.classList.add("color");
+            	// n3.classList.add("color");
+            }
+            else
+            {
+            	navbar.classList.remove("color");
+            	// n2.classList.remove("color");
+            	// n3.classList.remove("color");
+            }
+          } 
+          else {
+            navbar.classList.remove("sticky");
+          }
+}
+	var body=document.getElementById("main_body");
+	body.addEventListener('click',xy);
+	function xy(event)
+	{
+		console.log(event.offsetX);
+		console.log(event.offsetY)
+	}
+
+	</script>
+</body>
+</html>
